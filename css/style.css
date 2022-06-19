@@ -341,7 +341,7 @@ footer .copyright p {
     padding: 2em 1.4em;
   }
   header .logo a img {
-    width: 9em;
+    width: 6em;
   }
   header nav button {
     padding: 0.6em 2em 0.6em 2em;
@@ -357,12 +357,16 @@ footer .copyright p {
     padding: 2.5em 1em 2.5em 1em;
     text-align: center;
   }
+
+  main .container_1 .hero .content h2 {
+    padding-right: 0em;
+  }
   main .container_1 .hero .content p {
     font-size: 16px;
     line-height: 1.5em;
   }
   main .container_1 .hero .mock_up img {
-    width: 43vh;
+    width: 65vh;
   }
   main .container_2 {
     padding: 7em 1.4em 2em 1.4em;
