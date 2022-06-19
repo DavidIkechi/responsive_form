@@ -115,7 +115,7 @@ main .container_1 .hero .mock_up {
 }
 
 main .container_1 .hero .mock_up img {
-  width: 38.5vw;
+  width: 46vw;
 }
 
 /* end of first container */
@@ -390,7 +390,7 @@ footer .copyright p {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   header {
     padding: 2em 0em;
   }
@@ -420,7 +420,9 @@ footer .copyright p {
     line-height: 1.5em;
   }
   main .container_1 .hero .mock_up img {
-    width: 50vh;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
   }
   main .container_2 {
     padding: 7em 0em 2em 0em;
