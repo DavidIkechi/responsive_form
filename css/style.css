@@ -17,6 +17,13 @@ h6 {
   color: hsl(192, 100%, 9%);
 }
 
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body {
   background-image: url(../images/bg-hero-desktop.svg);
   background-color: hsl(193, 100%, 96%);
@@ -24,7 +31,7 @@ body {
 }
 
 header {
-  padding: 3em 16em 3em 16em;
+  padding: 3em 0em;
   display: flex;
 }
 header .logo {
@@ -64,7 +71,6 @@ main .container_1 {
 main .container_1 .hero {
   display: flex;
   align-items: center;
-  padding: 0em 16em 0em 16em;
   justify-content: center;
 }
 
@@ -116,12 +122,12 @@ main .container_1 .hero .mock_up img {
 
 main .container_2 {
   width: inherit;
-  padding: 7em 16em 2em 16em;
+  padding: 7em 0em 2em 0em;
   margin: 2em 0em 0em 0em;
   background-color: white;
   display: grid;
   grid-auto-rows: 1fr 1fr 1fr 0.2fr;
-  grid-gap: 1em;
+  grid-gap: 2em;
 }
 
 main .container_2 .grow_together,
@@ -135,6 +141,37 @@ main .container_2 .grow_together,
   grid-template-columns: 56% 43%;
   align-items: center;
   justify-content: center;
+}
+
+main .container_2 .grow_together:hover,
+.your_users:hover,
+.flowing:hover {
+  animation-name: stretch;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1.05);
+    border-right: 2px solid hsl(192, 100%, 9%);
+    border-left: 2px solid hsl(192, 100%, 9%);
+  }
+
+  50% {
+    transform: scale(1.1);
+    border-right: 2px solid hsl(322, 100%, 66%);
+    border-left: 2px solid hsl(322, 100%, 66%);
+  }
+
+  100% {
+    transform: scale(1);
+    border-right: 2px solid hsl(189, 100%, 3%);
+    border-left: 2px solid hsl(189, 100%, 3%);
+  }
 }
 
 main .container_2 .grow_together .mock_up img {
@@ -238,10 +275,10 @@ main .container_2 .ready button:hover {
 footer {
   width: 100%;
   background-color: hsl(192, 100%, 9%);
-  padding: 8.5em 16em 3em 16em;
+  padding: 8.5em 0em 3em 0em;
 }
 
-footer .container {
+footer .container_foot {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
   color: hsl(193, 100%, 96%);
@@ -251,7 +288,7 @@ footer .logo a img {
   width: 12vw;
   padding: 1.5em 2em 1.5em 2em;
 }
-footer .container li {
+footer .container_foot li {
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -259,11 +296,11 @@ footer .container li {
   line-height: 1.5em;
 }
 
-footer .container ul {
+footer .container_foot ul {
   list-style-type: none;
 }
 
-footer .container li.location {
+footer .container_foot li.location {
   background-image: url(../images/icon-location.svg);
   display: inline-block;
   background-repeat: no-repeat;
@@ -271,7 +308,7 @@ footer .container li.location {
   background-size: 3%;
 }
 
-footer .container li.mail {
+footer .container_foot li.mail {
   background-image: url(../images/icon-email.svg);
   display: inline-block;
   background-repeat: no-repeat;
@@ -279,7 +316,7 @@ footer .container li.mail {
   background-size: 6%;
 }
 
-footer .container li.phone {
+footer .container_foot li.phone {
   background-image: url(../images/icon-phone.svg);
   display: inline-block;
   background-repeat: no-repeat;
@@ -287,12 +324,12 @@ footer .container li.phone {
   background-size: 6%;
 }
 
-footer .container .quick_links {
+footer .container_foot .quick_links {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-footer .container .quick_links p a {
+footer .container_foot .quick_links p a {
   text-transform: capitalize;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -302,16 +339,16 @@ footer .container .quick_links p a {
   padding-left: 4em;
 }
 
-footer .container .quick_links p a:hover {
+footer .container_foot .quick_links p a:hover {
   text-decoration: underline;
 }
 
-footer .container .social_links {
+footer .container_foot .social_links {
   display: flex;
   padding-left: 1.7em;
 }
 
-footer .container .social_links a {
+footer .container_foot .social_links a {
   width: 25px;
   height: 25px;
   color: hsl(193, 100%, 96%);
@@ -322,7 +359,7 @@ footer .container .social_links a {
   padding: 0.4em;
 }
 
-footer .container .social_links a:hover {
+footer .container_foot .social_links a:hover {
   color: hsl(322, 100%, 66%);
   border: 2px solid hsl(322, 100%, 66%);
 }
@@ -336,9 +373,26 @@ footer .copyright p {
 }
 
 /* styling for mobile screen with maximum width of 395 */
-@media only screen and (max-width: 424px) {
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   header {
-    padding: 2em 1.4em;
+    padding: 2em 0em;
   }
   header .logo a img {
     width: 6em;
@@ -349,7 +403,7 @@ footer .copyright p {
 
   main .container_1 .hero {
     flex-direction: column;
-    padding: 0em 1.4em;
+    padding: 0em;
   }
 
   main .container_1 .hero .content {
@@ -366,10 +420,10 @@ footer .copyright p {
     line-height: 1.5em;
   }
   main .container_1 .hero .mock_up img {
-    width: 48vh;
+    width: 65vh;
   }
   main .container_2 {
-    padding: 7em 1.4em 2em 1.4em;
+    padding: 7em 0em 2em 0em;
   }
   main .container_2 .grow_together,
   .your_users {
@@ -435,9 +489,9 @@ footer .copyright p {
   }
 
   footer {
-    padding: 8.5em 1.5em 3em 1.5em;
+    padding: 8.5em 0em 3em 0em;
   }
-  footer .container {
+  footer .container_foot {
     display: flex;
     flex-direction: column;
     grid-column-gap: 0em;
@@ -447,29 +501,29 @@ footer .copyright p {
     padding: 1.5em 0em;
   }
 
-  footer .container ul {
+  footer .container_foot ul {
     padding-left: 0.5em;
   }
 
-  footer .container li {
+  footer .container_foot li {
     padding: 0em 0em 1em 1.5em;
     font-size: 13.5px;
   }
 
-  footer .container .social_links {
+  footer .container_foot .social_links {
     display: inline-block;
     text-align: center;
     margin-top: 4em;
   }
 
-  footer .container .social_links a {
+  footer .container_foot .social_links a {
     width: 30px;
     height: 30px;
     border-radius: 40px;
     padding: 0.45em;
   }
 
-  footer .container .quick_links {
+  footer .container_foot .quick_links {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -477,18 +531,18 @@ footer .copyright p {
   footer .copyright p {
     text-align: center;
   }
-  footer .container .quick_links p a {
+  footer .container_foot .quick_links p a {
     font-size: 13.5px;
     line-height: 2.5em;
     padding-left: 0.5em;
   }
-  footer .container li.mail {
+  footer .container_foot li.mail {
     background-size: 9%;
   }
-  footer .container li.location {
+  footer .container_foot li.location {
     background-size: 4%;
   }
-  footer .container li.phone {
+  footer .container_foot li.phone {
     background-size: 8%;
   }
 }
