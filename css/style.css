@@ -133,9 +133,9 @@ main .container_2 {
 main .container_2 .grow_together,
 .your_users {
   /*box-shadow: 0 0 6px #d7d3d3;*/
-  box-shadow: 0 0 10px #f2f2f2;
-  -webkit-box-shadow: 0 0 10px #f2f2f2;
-  -moz-box-shadow: 0 0 10px #f2f2f2;
+  box-shadow: 0 0 10px #d7d2d2;
+  -webkit-box-shadow: 0 0 10px #d7d2d2;
+  -moz-box-shadow: 0 0 10px #d7d2d2;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 56% 43%;
@@ -194,9 +194,9 @@ main .container_2 .grow_together .content p {
 /* flow together */
 main .container_2 .flowing {
   /*box-shadow: 0 0 6px #d7d3d3;*/
-  box-shadow: 0 0 10px #f2f2f2;
-  -webkit-box-shadow: 0 0 10px #f2f2f2;
-  -moz-box-shadow: 0 0 10px #f2f2f2;
+  box-shadow: 0 0 10px #d7d2d2;
+  -webkit-box-shadow: 0 0 10px #d7d2d2;
+  -moz-box-shadow: 0 0 10px #d7d2d2;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 46% 53%;
@@ -240,9 +240,9 @@ main .container_2 .your_users .content p {
 
 main .container_2 .ready {
   /*box-shadow: 0 0 6px #d7d3d3;*/
-  box-shadow: 0 0 3px #f2f2f2;
-  -webkit-box-shadow: 0 0 3px #f2f2f2;
-  -moz-box-shadow: 0 0 3px #f2f2f2;
+  box-shadow: 0 0 3px #d7d2d2;
+  -webkit-box-shadow: 0 0 3px #d7d2d2;
+  -moz-box-shadow: 0 0 3px #d7d2d2;
   border-radius: 10px;
   width: 50%;
   position: relative;
@@ -432,6 +432,8 @@ footer .copyright p {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   main .container_2 .grow_together .mock_up img {
