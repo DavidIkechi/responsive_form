@@ -141,6 +141,7 @@ main .container_2 .grow_together,
   grid-template-columns: 56% 43%;
   align-items: center;
   justify-content: center;
+  grid-column-gap: 2em;
 }
 
 main .container_2 .grow_together:hover,
