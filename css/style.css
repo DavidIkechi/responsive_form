@@ -108,6 +108,28 @@ main .container_1 .hero .content button {
 main .container_1 .hero .content button:hover {
   background-color: hsl(322, 100%, 80%);
   cursor: pointer;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-play-state: running;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 main .container_1 .hero .mock_up {
@@ -141,7 +163,8 @@ main .container_2 .grow_together,
   grid-template-columns: 56% 43%;
   align-items: center;
   justify-content: center;
-  grid-column-gap: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 main .container_2 .grow_together:hover,
