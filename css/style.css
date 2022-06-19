@@ -420,7 +420,7 @@ footer .copyright p {
     line-height: 1.5em;
   }
   main .container_1 .hero .mock_up img {
-    width: 65vh;
+    width: 50vh;
   }
   main .container_2 {
     padding: 7em 0em 2em 0em;
@@ -544,5 +544,25 @@ footer .copyright p {
   }
   footer .container_foot li.phone {
     background-size: 8%;
+  }
+
+  @keyframes stretch {
+    0% {
+      transform: scale(0.9);
+      border-right: 2px solid hsl(192, 100%, 9%);
+      border-left: 2px solid hsl(192, 100%, 9%);
+    }
+
+    50% {
+      transform: scale(0.95);
+      border-right: 2px solid hsl(322, 100%, 66%);
+      border-left: 2px solid hsl(322, 100%, 66%);
+    }
+
+    100% {
+      transform: scale(1);
+      border-right: 2px solid hsl(189, 100%, 3%);
+      border-left: 2px solid hsl(189, 100%, 3%);
+    }
   }
 }
