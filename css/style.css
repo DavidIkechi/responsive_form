@@ -55,8 +55,14 @@ header nav button {
 }
 
 header nav button:hover {
-  background-color: hsl(192, 100%, 99%);
+  font-weight: 400;
   cursor: pointer;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-play-state: running;
 }
 main {
   width: 100%;
@@ -88,7 +94,7 @@ main .container_1 .hero .content p {
   color: hsl(192, 100%, 9%);
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -137,7 +143,7 @@ main .container_1 .hero .mock_up {
 }
 
 main .container_1 .hero .mock_up img {
-  width: 43vw;
+  width: 46vw;
 }
 
 /* end of first container */
@@ -167,37 +173,6 @@ main .container_2 .grow_together,
   margin-bottom: 10px;
 }
 
-main .container_2 .grow_together:hover,
-.your_users:hover,
-.flowing:hover {
-  animation-name: stretch;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-direction: alternate;
-  animation-iteration-count: 2;
-  animation-play-state: running;
-}
-
-@keyframes stretch {
-  0% {
-    transform: scale(1.05);
-    border-right: 2px solid hsl(192, 100%, 9%);
-    border-left: 2px solid hsl(192, 100%, 9%);
-  }
-
-  50% {
-    transform: scale(1.1);
-    border-right: 2px solid hsl(322, 100%, 66%);
-    border-left: 2px solid hsl(322, 100%, 66%);
-  }
-
-  100% {
-    transform: scale(1);
-    border-right: 2px solid hsl(189, 100%, 3%);
-    border-left: 2px solid hsl(189, 100%, 3%);
-  }
-}
-
 main .container_2 .grow_together .mock_up img {
   width: 90%;
   padding: 2em;
@@ -210,7 +185,7 @@ main .container_2 .grow_together .content {
 main .container_2 .grow_together .content p {
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: hsl(208, 11%, 55%);
 }
@@ -240,7 +215,7 @@ main .container_2 .flowing .content {
 main .container_2 .flowing .content p {
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: hsl(208, 11%, 55%);
 }
@@ -257,7 +232,7 @@ main .container_2 .your_users .content {
 main .container_2 .your_users .content p {
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: hsl(208, 11%, 55%);
 }
@@ -294,6 +269,12 @@ main .container_2 .ready button {
 main .container_2 .ready button:hover {
   background-color: hsl(322, 100%, 80%);
   cursor: pointer;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-play-state: running;
 }
 
 footer {
@@ -302,15 +283,19 @@ footer {
   padding: 8.5em 0em 3em 0em;
 }
 
+main_footer {
+  display: grid;
+  grid-template-rows: 1fr;
+}
 footer .container_foot {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1.3fr 0.7fr 0.7fr 0.8fr;
   color: hsl(193, 100%, 96%);
-  grid-column-gap: 3em;
+  margin-right: 2em;
 }
 footer .logo a img {
-  width: 12vw;
-  padding: 1.5em 2em 1.5em 2em;
+  width: 10%;
+  padding: 1.5em 0em 1.5em 0em;
 }
 footer .container_foot li {
   font-size: 12px;
@@ -318,10 +303,12 @@ footer .container_foot li {
   font-weight: 400;
   padding: 0em 2em 1em 2em;
   line-height: 1.5em;
+  font-size: 14px;
 }
 
 footer .container_foot ul {
   list-style-type: none;
+  padding: 0em;
 }
 
 footer .container_foot li.location {
@@ -348,12 +335,7 @@ footer .container_foot li.phone {
   background-size: 6%;
 }
 
-footer .container_foot .quick_links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-footer .container_foot .quick_links p a {
+footer .container_foot .quick_links_1 p a {
   text-transform: capitalize;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -361,9 +343,27 @@ footer .container_foot .quick_links p a {
   font-weight: 400;
   text-decoration: none;
   padding-left: 4em;
+  line-height: 2.3em;
+  font-size: 13px;
 }
 
-footer .container_foot .quick_links p a:hover {
+footer .container_foot .quick_links_2 p a {
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: hsl(193, 100%, 96%);
+  font-weight: 400;
+  text-decoration: none;
+  padding-left: 4em;
+  line-height: 2.3em;
+  font-size: 13px;
+}
+
+footer .container_foot .quick_links_1 p a:hover {
+  text-decoration: underline;
+}
+
+footer .container_foot .quick_links_2 p a:hover {
   text-decoration: underline;
 }
 
@@ -396,6 +396,9 @@ footer .copyright p {
   text-align: right;
 }
 
+footer .copyright {
+  padding: 0em;
+}
 /* styling for mobile screen with maximum width of 395 */
 @media (min-width: 768px) {
   .container {
@@ -551,15 +554,15 @@ footer .copyright p {
     padding: 0.45em;
   }
 
-  footer .container_foot .quick_links {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   footer .copyright p {
     text-align: center;
   }
-  footer .container_foot .quick_links p a {
+  footer .container_foot .quick_links_1 p a {
+    font-size: 13.5px;
+    line-height: 2.5em;
+    padding-left: 0.5em;
+  }
+  footer .container_foot .quick_links_2 p a {
     font-size: 13.5px;
     line-height: 2.5em;
     padding-left: 0.5em;
@@ -572,25 +575,5 @@ footer .copyright p {
   }
   footer .container_foot li.phone {
     background-size: 8%;
-  }
-
-  @keyframes stretch {
-    0% {
-      transform: scale(0.9);
-      border-right: 2px solid hsl(192, 100%, 9%);
-      border-left: 2px solid hsl(192, 100%, 9%);
-    }
-
-    50% {
-      transform: scale(0.95);
-      border-right: 2px solid hsl(322, 100%, 66%);
-      border-left: 2px solid hsl(322, 100%, 66%);
-    }
-
-    100% {
-      transform: scale(1);
-      border-right: 2px solid hsl(189, 100%, 3%);
-      border-left: 2px solid hsl(189, 100%, 3%);
-    }
   }
 }
