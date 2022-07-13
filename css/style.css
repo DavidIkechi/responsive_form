@@ -94,7 +94,7 @@ main .container_1 .hero .content p {
   color: hsl(192, 100%, 9%);
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -185,7 +185,7 @@ main .container_2 .grow_together .content {
 main .container_2 .grow_together .content p {
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: hsl(208, 11%, 55%);
 }
@@ -215,7 +215,7 @@ main .container_2 .flowing .content {
 main .container_2 .flowing .content p {
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: hsl(208, 11%, 55%);
 }
@@ -232,7 +232,7 @@ main .container_2 .your_users .content {
 main .container_2 .your_users .content p {
   line-height: 1.3em;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: hsl(208, 11%, 55%);
 }
